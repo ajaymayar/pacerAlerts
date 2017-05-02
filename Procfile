@@ -1,1 +1,1 @@
-web: gunicorn pacerSearch.py --log-file -
+web: python pacerSearch.py
