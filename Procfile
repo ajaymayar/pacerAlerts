@@ -1,1 +1,1 @@
-web: pythonSearch.py
+web: python pythonSearch.py
