@@ -16,6 +16,14 @@ router.use(function (request, response, next) {
 });
 
 
+}, function(){}, true);
+
+app.get("/", function (request, response) {
+  response.sendFile(path + "/index.html");
+});
+
+app.use("/", router);
+
 console.log('about to create cronjob');
 var CronJob = require('cron').CronJob;
 var job = new CronJob('00 30 11 * * 1-5', function() {
@@ -36,13 +44,6 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
     console.log(message);
   });
 
-}, function(){}, true);
-
-app.get("/", function (request, response) {
-  response.sendFile(path + "/index.html");
-});
-
-app.use("/", router);
 
 app.listen(3000, function() {
   console.log("Port 3000");
