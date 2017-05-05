@@ -1,1 +1,1 @@
-web: python pacerSearch.py
+web: node server.js

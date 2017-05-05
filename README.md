@@ -10,3 +10,23 @@ Can be improved by:
 
 
 uses Mailgun to send emails
+
+
+For now:
+        o Make it only run once a day
+
+TODO: 
+    o Need this to run 100% of the time, but then the user can modify a web interface
+        - initialize once, then always running (with cronjob), but user can change:
+            > email
+            > frequency
+            > case number
+            > stop
+
+
+how to make multiple 
+
+
+How to start/stop receiving alerts???:
+    - database of users?
+

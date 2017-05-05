@@ -1,0 +1,21 @@
+h1{
+    color: #1f1a38;
+    text-align: center;
+}
+.jumbotron{
+    background-image: url("img/boston.jpg");
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.navbar-inverse{
+    margin: 0;
+    padding: 0;
+    border-style: solid;
+    border-size: 5px;
+    border-radius: 0px;
+}

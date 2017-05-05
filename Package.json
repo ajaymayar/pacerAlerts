@@ -1,0 +1,12 @@
+{
+    "name" : "pacer-alerts",
+    "version" : "0.0.1",
+    "scripts" : {
+        "start" : "node server.js"
+    },
+    "dependencies" : {
+        "express" : "latest",
+        "node-cron" : "latest",
+        "python-shell" : "latest"
+    }
+}
