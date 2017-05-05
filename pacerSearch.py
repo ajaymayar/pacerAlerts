@@ -15,20 +15,20 @@ def send_message(message):
             "https://api.mailgun.net/v3/sandbox2382a0bb2e994e37a0140cecb2f0ff04.mailgun.org/messages",
             auth=("api", "key-37b8a84c8f0875803c167f24f0fc28dd"),
             data={"from": "Pacer Alert <postmaster@sandbox2382a0bb2e994e37a0140cecb2f0ff04.mailgun.org>",
-                "to": sys.argv[2],
+                "to": ["ajaymayar96@gmail.com", "ajay.mayar@tufts.edu"],
                 "subject": "PACER case update",
-                "text": message })
+                "text": message, 
+                "recipient-variables": ('{"ajaymayar96@gmail.com": {"first":"Ajay", "id":1}, '
+                    '"ajaymayar96@gmail.com": {"first":"Ajay", "id": 2}}')})
 
 def find_case(case):
     length = len(feed['items'])
     i = 0
     casenumber = get_case_number(case)
-    # print "finding: " + casenumber
     while i < length:
         current = get_case_number(feed['items'][i]['title'])
-        # print "checking " + current
         if current == casenumber: 
-            print get_message(i)
+            print "found case: " + current
             send_message(get_message(i))
         i += 1
 

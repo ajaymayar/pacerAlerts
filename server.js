@@ -20,15 +20,22 @@ console.log('about to create cronjob');
 var CronJob = require('cron').CronJob;
 var job = new CronJob('00 30 11 * * 1-5', function() {
 
+  // 1:17-cv-10242-IT Government of Bermuda v. Lahey Clinic, Inc. et al
   var options = {
-    args: ['1:17-cv-10242-IT', 'ajaymayar96@gmail.com']
+    args: ['1:17-cv-10242-IT']
   };
 
   var PythonShell = require('python-shell');
-  PythonShell.run('pacerSearch.py', options, function (err) {
-    if (err) throw err;
-    console.log('finished');
+  var pyshell = new PythonShell('pacerSearch.py', options);
+  // PythonShell.run('pacerSearch.py', options, function (err) {
+  //  if (err) throw err;
+  //  console.log('Ran search');
+  // });
+  
+  pyshell.on('message', function(message) {
+    console.log(message);
   });
+
 }, function(){}, true);
 
 app.get("/", function (request, response) {
