@@ -18,7 +18,7 @@ router.use(function (request, response, next) {
 
 
 app.get("/", function (request, response) {
-  response.sendFile(path + "/index.html");
+  response.sendFile(path + "/web/index.html");
 });
 
 app.use("/", router);
@@ -33,7 +33,7 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
   };
 
   var PythonShell = require('python-shell');
-  var pyshell = new PythonShell('pacerSearch.py', options);
+  var pyshell = new PythonShell('/script/pacerSearch.py', options);
   // PythonShell.run('pacerSearch.py', options, function (err) {
   //  if (err) throw err;
   //  console.log('Ran search');
