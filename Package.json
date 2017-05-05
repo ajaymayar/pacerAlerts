@@ -5,9 +5,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "latest",
+    "express": "4.15.2",
     "node-cron": "latest",
-    "python-shell": "latest"
+    "python-shell": "latest",
+    "cron": "latest"
   },
   "description": "-- for personal use to receive alerts for changes in a single MA court case",
   "main": "server.js",
@@ -23,5 +24,7 @@
     "url": "https://github.com/ajaymayar/pacerAlerts/issues"
   },
   "homepage": "https://github.com/ajaymayar/pacerAlerts#readme",
-  "engines": {"npm" : "3.8.6" } 
+  "engines": {
+    "npm": "3.8.6"
+  }
 }
