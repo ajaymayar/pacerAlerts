@@ -5,10 +5,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "cron": "latest",
     "express": "4.15.2",
+    "foobar": "^1.1.0",
     "node-cron": "latest",
-    "python-shell": "latest",
-    "cron": "latest"
+    "python-shell": "latest"
   },
   "description": "-- for personal use to receive alerts for changes in a single MA court case",
   "main": "server.js",
