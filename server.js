@@ -39,7 +39,7 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
 }, function(){}, true);
 
 app.get("/", function (request, response) {
-  response.sendFile(path + "index.html");
+  response.sendFile(path + "/index.html");
 });
 
 app.use("/", router);
