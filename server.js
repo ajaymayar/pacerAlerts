@@ -16,7 +16,6 @@ router.use(function (request, response, next) {
 });
 
 
-}, function(){}, true);
 
 app.get("/", function (request, response) {
   response.sendFile(path + "/index.html");
@@ -43,6 +42,7 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
   pyshell.on('message', function(message) {
     console.log(message);
   });
+}, function(){}, true);
 
 
 app.listen(3000, function() {
